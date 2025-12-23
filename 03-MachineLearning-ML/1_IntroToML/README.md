@@ -50,3 +50,21 @@ The goal is the "Goldilocks Zone."
 *   **Description:** Model memorizes noise instead of patterns.
 *   **Symptoms:** Low Training Error, High Test Error.
 *   **Fix:** Add more data, Feature selection, **Regularization**.
+
+## 7. Hyperparameter Tuning Strategies
+Finding the best combination of external configurations (Hyperparameters).
+
+### 1. Grid Search (Brute Force)
+*   **Method:** Defines a grid of specific values and tests **every** possible combination.
+*   **Pros:** Thorough; guaranteed to find the best option within the provided grid.
+*   **Cons:** **Computationally Expensive.** Time increases exponentially with more parameters.
+
+### 2. Random Search (Statistical)
+*   **Method:** Selects random combinations from a range of values for a fixed number of iterations.
+*   **Pros:** Faster than Grid Search. efficient for high-dimensional spaces where not all parameters are equally important.
+*   **Cons:** No guarantee of finding the optimal combination.
+
+### 3. Bayesian Optimization (Probabilistic/Smart)
+*   **Method:** Uses past evaluation results to build a probability model (surrogate) to predict which hyperparameters will likely yield better results next.
+*   **Pros:** Highly efficient. Finds optimal parameters with fewer training runs.
+*   **Cons:** More complex to implement; difficult to parallelize.
